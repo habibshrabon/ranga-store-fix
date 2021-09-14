@@ -1,6 +1,6 @@
 const loadProducts = () => {
+  // API call
   const url = `https://fakestoreapi.com/products`;
-  console.log(url);
   fetch(url)
     .then((response) => response.json())
     .then((data) => showProducts(data));
@@ -18,7 +18,7 @@ const showProducts = (products) => {
       <div>
         <img class="product-image mb-2" src=${image}></img>
       </div>
-        <h4>${product.title}</h4>
+        <h4>${product.title.slice(0, 20)}</h4>
         <p>Category: ${product.category}</p>
         <p>
           <i class="fas fa-star icon-bg"></i>
@@ -28,9 +28,13 @@ const showProducts = (products) => {
           <i class="far fa-star icon-bg"></i> 
           (${product.rating.rate}) 
         </p>
-        <p><span class="rating-style">Reviews:</span> ${product.rating.count}</p>
+        <p><span class="rating-style">Reviews:</span> ${
+          product.rating.count
+        }</p>
         <h2>Price: $ ${product.price}</h2>
-          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-black bg-black text-white">add to cart</button>
+          <button onclick="addToCart(${product.id},${
+      product.price
+    })" id="addToCart-btn" class="buy-now btn btn-black bg-black text-white">add to cart</button>
           <button id="details-btn" class="btn btn-danger">Details</button>
       </div>
       `;
@@ -46,7 +50,7 @@ const addToCart = (id, price) => {
   updateTotal();
   document.getElementById("total-Products").innerText = count;
 };
-
+//  get input value function
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
   const converted = parseFloat(element);

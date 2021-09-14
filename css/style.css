@@ -3,10 +3,7 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 .container {
-  background-color: #f4eddd;
-}
-.text-style {
-  color: #e76f51;
+  background-color: #dedce0;
 }
 .rating-style,
 .cart-style {
@@ -16,7 +13,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -24,11 +20,11 @@ body {
   justify-content: center;
 }
 .single-product {
-  height: 550px;
+  height: 470px;
   padding: 10px;
   transition: 0.6s;
   border-radius: 5px;
-  background-color: white;
+  background-color: #f4eddd;
 }
 .single-product:hover {
   box-shadow: 4px 4px 7px gray;
@@ -38,6 +34,7 @@ body {
 .product-image {
   width: 150px;
   height: 150px;
+  border-radius: 5px;
 }
 .icon-bg {
   color: #e77c40;
