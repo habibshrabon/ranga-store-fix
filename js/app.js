@@ -16,7 +16,7 @@ const showProducts = (products) => {
     const div = document.createElement("div");
     div.classList.add("product");
     div.innerHTML = `<div class="single-product">
-      <div>
+      <div class="product-thumb">
         <img class="product-image mb-2" src=${image}></img>
       </div>
         <h4>${product.title.slice(0, 20)}</h4>
